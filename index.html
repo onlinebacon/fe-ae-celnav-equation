@@ -1,0 +1,51 @@
+<meta charset="utf-8">
+<style>
+    body {
+        margin: 0px;
+        background-color: #222;
+    }
+    div.equation-wrapper {
+        background-color: #aaa;
+        padding: 5px;
+    }
+    textarea {
+        height: 100px;
+        width: 100%;
+        resize: vertical;
+    }
+    canvas {
+        background-color: #444;
+    }
+    .fix {
+        background-color: #333;
+        padding: 10px;
+        display: inline-block;
+        margin: 10px;
+        box-shadow: -5px 5px 15px #111;
+        border-radius: 5px;
+    }
+    .info {
+        margin-bottom: 10px;
+        background-color: #444;
+        border: 1px solid #666;
+        border-radius: 5px;
+        padding: 15px;
+        font-family: monospace;
+        font-size: 14px;
+        color: #ccc;
+    }
+    .fix-container {
+        margin: 20px;
+    }
+</style>
+<body>
+    <div class="equation-wrapper">
+        <form spellcheck="false">
+            <textarea></textarea>
+        </form>
+    </div>
+    <img src="aeprojection.png" style="display:none;">
+    <div class="fix-container"></div>
+</body>
+<script src="fixArr.js"></script>
+<script src="script.js"></script>
