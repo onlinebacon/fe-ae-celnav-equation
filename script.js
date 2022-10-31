@@ -1,5 +1,5 @@
 const img = document.querySelector('img');
-const size = 600;
+const size = 580;
 
 const SIDEREAL_DAY_MS = 86164090.53820801;
 const NULL_ARIES_GHA_TIME = 1656652979900;
