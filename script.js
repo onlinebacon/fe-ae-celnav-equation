@@ -93,12 +93,8 @@ const markErrorLine = (ctx, ax, ay, bx, by) => {
     ctx.moveTo(ax, ay);
     ctx.lineTo(bx, by);
 
-    ctx.strokeStyle = 'rgba(255, 128, 0, 0.5)';
-    ctx.lineWidth = 3;
-    ctx.stroke();
-
     ctx.strokeStyle = '#fff';
-    ctx.lineWidth = 1.5;
+    ctx.lineWidth = 1;
     ctx.stroke();
 };
 
@@ -149,12 +145,14 @@ const getResults = (c1, c2) => {
 };
 
 const drawCircle = (ctx, { center, radius }) => {
-    ctx.lineWidth = 2;
-    ctx.strokeStyle = ctx.fillStyle = 'rgba(255, 255, 255, 0.5)';
+    ctx.lineWidth = 1;
+    ctx.fillStyle = 'rgba(255, 192, 0, 0.05)';
+    ctx.strokeStyle = 'rgba(255, 192, 0, 0.2)';
     ctx.beginPath();
     ctx.arc(...center, radius, 0, PI*2);
+    ctx.fill();
     ctx.stroke();
-    ctx.strokeStyle = ctx.fillStyle = 'rgba(255, 255, 255, 0.75)';
+    ctx.fillStyle = 'rgba(255, 192, 0, 0.75)';
     ctx.beginPath();
     ctx.arc(...center, 2, 0, PI*2);
     ctx.fill();
@@ -163,11 +161,11 @@ const drawCircle = (ctx, { center, radius }) => {
 const markSpot = (ctx, x, y, color) => {
     ctx.fillStyle = '#fff';
     ctx.beginPath();
-    ctx.arc(x, y, 3, 0, PI*2);
+    ctx.arc(x, y, 2, 0, PI*2);
     ctx.fill();
     ctx.fillStyle = color;
     ctx.beginPath();
-    ctx.arc(x, y, 2, 0, PI*2);
+    ctx.arc(x, y, 1.5, 0, PI*2);
     ctx.fill();
 };
 
