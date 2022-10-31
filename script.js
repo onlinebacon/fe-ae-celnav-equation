@@ -260,7 +260,7 @@ const updateAll = () => {
 };
 
 const textarea = document.querySelector('textarea');
-textarea.value = `// Hs (degrees) to miles\n` + HsToMiles.toString();
+textarea.value = HsToMiles.toString();
 textarea.oninput = () => {
     try {
         eval(`HsToMiles = ${textarea.value};`);
